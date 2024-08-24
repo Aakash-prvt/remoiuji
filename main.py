@@ -14,7 +14,7 @@ bot = Client(
     "Link-Gen",
     api_hash="08d78fb05bdb90f1be4a4f1f0fef5f1e",
     api_id=16768772,
-    bot_token="6749453240:AAH-V2wAo2D9Z-55qnvaixijDN_FdQkWooI",
+    bot_token=os.getenv("TOKEN"),
 )
 
 flask_app = Flask('')
