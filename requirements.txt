@@ -1,6 +1,5 @@
 pyrogram
 flask
-threading
 string
 shortzy
 tgcrypto
