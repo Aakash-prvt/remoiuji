@@ -14,7 +14,7 @@ bot = Client(
     "Link-Gen",
     api_hash="08d78fb05bdb90f1be4a4f1f0fef5f1e",
     api_id=16768772,
-    bot_token=os.getenv("TOKEN"),
+    bot_token=os.getenv("TOKEN", "6749453240:AAH-V2wAo2D9Z-55qnvaixijDN_FdQkWooI"),
 )
 
 flask_app = Flask('')
@@ -54,8 +54,8 @@ async def link_gen(client: Client, message: Message):
     
     if is_valid_url(link):
         token = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
-        short_url = "publicearn.com"
-        short_token = "5fcfd0c999d65c6deaa756e5cb898658ce28f728"
+        short_url = "Earn4link.in"
+        short_token = "4e1e0bfe099ace1e890fdd06df0ec1bc7081be5f"
         link = await get_shortlink(short_url, short_token, link)
         await message.reply(f"Your short link is: `{link}`")
     else:
